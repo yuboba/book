@@ -62,13 +62,16 @@ code {
 }
 
 .card-container {
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+    width: 75%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     perspective: 1000px;
 }
 
 .card {
-    max-width: 500px;
     display: flex;
     flex-direction: column;
     transform: rotateX(60deg) scale(0.7);
@@ -85,7 +88,6 @@ code {
 }
 
 .card-details {
-    width: 100%;
     background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
     padding: 2rem 1rem 2rem 1rem;
     display: flex;
