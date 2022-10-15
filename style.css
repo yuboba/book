@@ -1,0 +1,128 @@
+@font-face {
+    font-family: "confortaa";
+    src: url("assets/fonts/Comfortaa-Regular.ttf");
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    font-family: confortaa;
+    overflow: hidden;
+    background: linear-gradient(to right, #ffa17f, #00223e);
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+header {
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    color: whitesmoke;
+    font-size: 2rem;
+}
+
+header>section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 2rem;
+}
+
+code {
+    background-color: black;
+    padding: 1rem 2rem;
+}
+
+#bg-absolute {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    perspective: 1000px;
+}
+
+#bg-wood {
+    width: 100vw;
+    height: 100vh;
+    transform: rotateX(60deg);
+    background-color: #00223e;
+    background-image: url("assets/images/wood.png");
+}
+
+.card-container {
+    margin-top: -100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    perspective: 1000px;
+}
+
+.card {
+    width: 25%;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    gap: 0;
+    transform: rotateX(60deg) scale(0.7);
+    box-shadow: 0px 20px 50px #555;
+    transition: .5s all ease;
+}
+
+.card:hover {
+    transform: rotate(0deg) scale(1) translateY(20px);
+}
+
+.card-details {
+    width: 100%;
+    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-details>h3 {
+    text-align: center;
+    text-shadow: 0px 0px 10px #eee;
+    color: #eee;
+    letter-spacing: 2px;
+}
+
+.card-details>p {
+    margin-top: 10px;
+    color: whitesmoke;
+    font-size: larger;
+}
+
+.card-details>a {
+    margin-top: 10px;
+    color: black;
+    background-color: whitesmoke;
+    font-size: larger;
+    text-decoration: none;
+    padding: 1rem 2rem;
+    text-align: center;
+}
+
+.card-details>a:hover {
+    color: whitesmoke;
+    background-color: black;
+}
+
+.logo-section {
+    margin: 20px 0;
+    display: flex;
+    gap: 10px;
+}
