@@ -12,8 +12,8 @@
 body, html {
     font-family: confortaa;
     overflow: hidden;
-    background-color: whitesmoke;
-    height: 100vh;
+    background-color: #e0e0e0;
+    /* height: 100vh; */
 }
 
 body {
@@ -37,29 +37,18 @@ header>section {
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 20px;
-    font-size: 2rem;
+    gap: 30px;
+}
+
+.header-link {
+    color: black;
+    font-size: 1.5rem;
 }
 
 code {
     background-color: black;
     color: whitesmoke;
     padding: 1rem 2rem;
-}
-
-#bg-absolute {
-    position: absolute;
-    width: 100vw;
-    height: 100vh;
-    perspective: 1000px;
-}
-
-#bg-wood {
-    width: 100vw;
-    height: 100vh;
-    transform: rotateX(60deg);
-    background-color: #00223e;
-    background-image: url("assets/images/wood.png");
 }
 
 .card-container {
@@ -74,7 +63,7 @@ code {
 .card {
     display: flex;
     flex-direction: column;
-    transform: rotateX(35deg) scale(0.7) translateY(-500px);
+    transform: rotateX(35deg) scale(0.7) translateY(-50%);
     border: 2px solid #0f2027;
     transition: .5s all ease-out;
 }
@@ -100,17 +89,17 @@ code {
 
 .card-2 {
     box-shadow:
-        0px 1px 0px #203a43,
-        0px 2px 0px #203a43,
-        0px 3px 0px #203a43,
-        0px 4px 0px #203a43,
-        0px 5px 0px #203a43,
-        0px 6px 0px #203a43,
-        0px 7px 0px #203a43,
-        0px 8px 0px #203a43,
-        0px 9px 0px #203a43,
-        0px 10px 0px #0f2027,
-        0px 15px 10px 1px #000;
+        0 1px 0px #203a43,
+        0 2px 0px #203a43,
+        0 3px 0px #203a43,
+        0 4px 0px #203a43,
+        0 5px 0px #203a43,
+        0 6px 0px #203a43,
+        0 7px 0px #203a43,
+        0 8px 0px #203a43,
+        0 9px 0px #203a43,
+        0 10px 0px #0f2027,
+        0 15px 10px 1px #000;
 }
 
 .card-2:hover {
@@ -180,4 +169,33 @@ code {
     margin: 20px 0;
     display: flex;
     gap: 10px;
+}
+
+@media (max-width: 768px) {
+    body, html {
+        overflow-y: auto;
+        height: auto;
+    }
+
+    header {
+        font-size: 1rem;
+    }
+
+    .card-container {
+        width: 90%;
+        grid-template-columns: none;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 75px;
+        perspective: none;
+        margin-top: -25px;
+        padding: 2rem;
+    }
+
+    .card {
+        transform: rotateX(0) scale(1) translateY(0);
+    }
+
+    .card:hover {
+        transform: rotateX(0) scale(1) translateY(0);
+    }
 }
