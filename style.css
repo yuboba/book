@@ -29,7 +29,7 @@ header {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 header>section {
@@ -53,9 +53,32 @@ header>section {
 }
 
 code {
+    font-family: 'Courier New', Courier, monospace;
     background-color: black;
     color: whitesmoke;
     padding: 1rem 2rem;
+}
+
+.underscore {
+    animation: blink 1.2s ease infinite;
+}
+
+@keyframes blink {
+    0% {
+        opacity: 1;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    60% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 footer {
@@ -75,6 +98,7 @@ footer>p {
     margin: 5rem;
     font-size: 1.5rem;
     background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
+    min-width: 175px
 }
 
 .footer-child-1 {
@@ -214,7 +238,7 @@ footer>p {
 }
 
 @media (max-width: 1200px) {
-    footer>p{
+    footer>p {
         font-size: 1rem;
     }
 }
@@ -225,8 +249,8 @@ footer>p {
     }
 
     header {
-        padding: 1rem;
-        font-size: 1rem;
+        padding: 0.5rem;
+        font-size: 0.90rem;
     }
 
     footer {
