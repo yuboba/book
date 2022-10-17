@@ -132,10 +132,11 @@ footer>p {
     transform: rotateX(35deg) scale(0.7) translateY(-50%);
     border: 2px solid #0f2027;
     transition: .5s all ease-out;
+    margin: 0 10px 0 10px;
 }
 
 .card:hover {
-    transform: rotate(0deg) scale(0.8) translateY(-100px);
+    transform: rotate(0deg) scale(1) translateY(-100px);
 }
 
 .card-1 {
@@ -240,6 +241,16 @@ footer>p {
 @media (max-width: 1200px) {
     footer>p {
         font-size: 1rem;
+    }
+}
+
+@media (max-width: 950px) {
+    .card {
+        margin: 0 -20px 0 -20px;
+    }
+
+    footer>p {
+        margin: 4rem;
     }
 }
 
