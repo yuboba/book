@@ -40,14 +40,16 @@ header>section {
 }
 
 .header-link {
-    color: whitesmoke;
-    font-size: 1.5rem;
-    padding: 1rem;
+    color: white;
+    text-decoration: none;
+    box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
+    font-size: medium;
 }
 
 .header-link:hover {
-    color: black;
-    background-color: whitesmoke;
+    box-shadow:
+        inset 0 -1.2em 0 hsla(0, 0%, 100%, 0.4),
+        0 0 0 10px hsla(0, 0%, 100%, 0.4);
 }
 
 code {
