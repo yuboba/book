@@ -244,10 +244,6 @@ footer>p {
 }
 
 @media (max-width: 768px) {
-    body, html {
-        height: auto;
-    }
-
     header {
         padding: 0.5rem;
         font-size: 0.90rem;
@@ -258,12 +254,14 @@ footer>p {
     }
 
     .card-container {
+        height: auto;
         width: 90%;
-        grid-template-columns: none;
-        grid-template-rows: repeat(3, 1fr);
+        display: flex;
+        flex-direction: column;
         gap: 75px;
         perspective: none;
         margin-top: -25px;
+        margin-bottom: 75px;
         padding: 2rem;
     }
 
@@ -274,5 +272,31 @@ footer>p {
 
     .card:hover {
         transform: rotateX(0) scale(1) translateY(0);
+    }
+
+    .card-1, .card-2, .card-3 {
+        box-shadow:
+            1px 1px 0px #203a43,
+            2px 2px 0px #203a43,
+            3px 3px 0px #203a43,
+            4px 4px 0px #203a43,
+            5px 5px 0px #203a43,
+            6px 6px 0px #203a43,
+            7px 7px 0px #203a43,
+            8px 8px 0px #203a43,
+            9px 9px 0px #203a43,
+            10px 10px 0px #0f2027,
+            15px 15px 10px 1px #000;
+    }
+}
+
+@media (max-width: 360px) {
+    .card-container {
+        gap: 0;
+    }
+
+    .card {
+        max-width: 450px;
+        transform: rotateX(0) scale(0.8) translateY(0);
     }
 }
