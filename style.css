@@ -13,9 +13,6 @@ body, html {
     font-family: confortaa;
     background-color: #8F2D56;
     color: whitesmoke;
-}
-
-body {
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,14 +26,6 @@ header {
     justify-content: center;
     align-items: center;
     gap: 20px;
-    font-size: 1.5rem;
-}
-
-header>section {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    gap: 30px;
 }
 
 .header-link {
@@ -57,6 +46,7 @@ code {
     background-color: black;
     color: whitesmoke;
     padding: 1rem 2rem;
+    font-size: 1.5rem;
 }
 
 .underscore {
@@ -83,34 +73,20 @@ code {
 
 footer {
     color: whitesmoke;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    height: 200px;
-    width: 75%;
-
+    margin: 50px 0;
 }
 
 footer>p {
     padding: 2rem 0;
-    margin: 5rem;
     font-size: 1.5rem;
-    background: linear-gradient(to bottom, #0f2027, #203a43, #2c5364);
-    min-width: 175px
 }
 
-.footer-child-1 {
-    box-shadow: 15px 15px 25px 1px #000;
-}
-
-.footer-child-2 {
-    box-shadow: 0 15px 25px 1px #000;
-}
-
-.footer-child-3 {
-    box-shadow: -15px 15px 25px 1px #000;
+.fa-heart {
+    color: #89DAFF;
 }
 
 .card-container {
@@ -121,7 +97,6 @@ footer>p {
     grid-template-columns: repeat(3, 1fr);
     justify-content: center;
     align-items: center;
-    /* transform: translateY(50%); */
     perspective: 1000px;
 }
 
@@ -238,30 +213,19 @@ footer>p {
     gap: 10px;
 }
 
-@media (max-width: 1200px) {
-    footer>p {
-        font-size: 1rem;
-    }
-}
-
 @media (max-width: 950px) {
     .card {
         margin: 0 -20px 0 -20px;
-    }
-
-    footer>p {
-        margin: 4rem;
     }
 }
 
 @media (max-width: 768px) {
     header {
         padding: 0.5rem;
-        font-size: 0.90rem;
     }
 
-    footer {
-        display: none;
+    code {
+        font-size: 0.9rem;
     }
 
     .card-container {
@@ -272,7 +236,6 @@ footer>p {
         gap: 75px;
         perspective: none;
         margin-top: -25px;
-        margin-bottom: 75px;
         padding: 2rem;
     }
 
@@ -308,6 +271,10 @@ footer>p {
 
     .card {
         max-width: 450px;
+        transform: rotateX(0) scale(0.8) translateY(0);
+    }
+
+    .card:hover {
         transform: rotateX(0) scale(0.8) translateY(0);
     }
 }
