@@ -1,3 +1,14 @@
+:root {
+    --clr-red: #8F2D56;
+    --clr-blue-light: #89DAFF;
+    --clr-blue-dark: #2374AB;
+    --clr-green-dark: #226F54;
+    --clr-green-light: #C2EABA;
+    --clr-yellow: #FFBA08;
+    --clr-white: whitesmoke;
+    --clr-grey-dark: #11151C;
+}
+
 @font-face {
     font-family: "confortaa";
     src: url("assets/fonts/Comfortaa-Regular.ttf");
@@ -11,8 +22,8 @@
 
 body, html {
     font-family: confortaa;
-    background-color: #8F2D56;
-    color: whitesmoke;
+    background-color: var(--clr-red);
+    color: var(--clr-white);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -29,7 +40,7 @@ header {
 }
 
 .header-link {
-    color: white;
+    color: var(--clr-white);
     text-decoration: none;
     box-shadow: inset 0 -1px 0 hsla(0, 0%, 100%, 0.4);
     font-size: medium;
@@ -44,7 +55,7 @@ header {
 code {
     font-family: 'Courier New', Courier, monospace;
     background-color: black;
-    color: whitesmoke;
+    color: var(--clr-white);
     padding: 1rem 2rem;
     font-size: 1.5rem;
 }
@@ -72,7 +83,7 @@ code {
 }
 
 footer {
-    color: whitesmoke;
+    color: var(--clr-white);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -86,7 +97,24 @@ footer>p {
 }
 
 .fa-heart {
-    color: #89DAFF;
+    color: var(--clr-blue-light);
+}
+
+#magic-btn {
+    text-decoration: none;
+    cursor: pointer;
+    background-color: var(--clr-yellow);
+    color: black;
+    padding: 1.5rem 2rem;
+    font-size: 1.5rem;
+    border: 2px solid black;
+    box-shadow: 0 1rem 1rem rgba(0, 0, 0, 0.4);
+    transition: 0.3s;
+}
+
+#magic-btn:hover {
+    color: var(--clr-grey-dark);
+    background-color: var(--clr-blue-light);
 }
 
 .card-container {
