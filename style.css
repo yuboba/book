@@ -148,7 +148,7 @@ footer>p {
     display: flex;
     flex-direction: column;
     border: 2px solid rgb(15, 32, 39);
-    transition: .5s all ease-out;
+    transition: .25s all ease-out;
     margin: 0 10px 0 10px;
 }
 
